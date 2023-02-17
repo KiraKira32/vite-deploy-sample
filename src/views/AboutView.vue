@@ -1,6 +1,7 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
+    <h1>測試測試測試</h1>
     {{ data }}
   </div>
 </template>
@@ -17,9 +18,9 @@ export default {
     console.log(import.meta.env.VITE_TEXT);
     const url = import.meta.env.VITE_PATH;
     this.$http.get(url).then((res) => {
-      console.log(res);
       this.data = res.data.results[0];
       console.log(this.data);
+      console.log(res);
     });
   },
 };
